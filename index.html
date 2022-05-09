@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork7</title>
+</head>
+<body>
+    <script>
+        const home = [
+            'flat-1', 'flat-2', 'flat-3', 
+            'flat-4', 'flat-5', 'flat-6', 
+            'flat-7', 'flat-8', 'flat-9', 
+            'flat-10', 'flat-11', 'flat-12',
+        ];
+
+        function push(index, flat) {
+            const result = [];
+
+            for (let i = 0; i < home.length; i++) {
+                if (index === i) {
+                    result[result.length] = flat;
+                }
+                result[result.length] = home[i];
+            }
+            return result
+        }
+
+        console.log(push(2, 'flat-13'));
+
+        function indexOf(home, flat) {
+            let result = -1;
+
+            for (let i = 0; i < home.length; i++) {
+                if (home[i] === flat) {
+                    result = i;
+                    break
+                }
+            }
+            return result
+        }
+
+        console.log(indexOf(home, 'flat-6'));
+        console.log(indexOf(home, 'flat-0'));
+
+        function lastIndexOf(home, flat) {
+            let result = -1;
+
+            for (let i = 0; i < home.length; i++) {
+                if (home[i] === flat) {
+                    result = i;
+                }
+            }
+            return result
+        }
+
+        console.log(lastIndexOf(home, 'flat-12'));
+
+        function includes(home, flat) {
+            let result = false;
+
+            for (let i = 0; i < home.length; i++) {
+                if (home[i] === flat) {
+                    result = true
+                }
+            }
+            return result
+        }
+
+        console.log(includes(home, 'flat-1'));
+        console.log(includes(home, 'flat-15'));
+    </script>
+</body>
+</html>
